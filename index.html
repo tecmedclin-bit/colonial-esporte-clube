@@ -105,6 +105,31 @@
 #galeriaFotoAmpliada img{display:block;max-width:100%;max-height:calc(95vh - 70px);object-fit:contain;margin:auto}
 #fecharGaleriaFoto{position:absolute;right:10px;top:5px;border:0;background:transparent;color:white;font-size:32px;cursor:pointer}
 @media(max-width:580px){.gallery-photo{flex-basis:70%;min-width:70%}.gallery-photo img{height:350px}}
+
+/* Modelo alternativo compacto com escudo em marca-d’água. */
+.socio-modal{width:min(92vw,690px);border-radius:20px;background:#071f48;color:#fff;box-shadow:0 30px 100px #0009}
+.socio-modal::backdrop{background:rgba(2,12,30,.84)}
+.socio-content{min-height:440px;padding:65px 46px 48px;background:radial-gradient(circle at 50% 12%,#155aa2 0%,#082f69 46%,#04162f 100%);border-top:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.socio-content::before{background:url("Bras%C3%A3o%20Colonial%20Esporte%20Clube%20em%20Azul%20e%20Branco.png") center center / 65% auto no-repeat;opacity:.12}
+.socio-content::after{content:"";position:absolute;inset:13px;border:1px solid #ffffff35;border-radius:12px;pointer-events:none}
+.socio-close{right:22px;top:20px;background:#ffffff20;color:white;border:1px solid #ffffff50;z-index:3}
+.socio-kicker{color:#c6dff8;letter-spacing:.19em;font-size:11px;margin:0 0 25px}
+.socio-content h2{font-size:clamp(37px,7vw,60px);line-height:1.02;color:white;max-width:550px;text-shadow:0 3px 14px #0004;margin:0 0 25px;font-weight:900}
+.socio-content p{color:#edf5ff;font-size:18px;max-width:510px;margin:0 auto 28px}
+.socio-coming{background:#fff;color:#063b88;border-radius:30px;padding:14px 24px;font-size:12px;letter-spacing:.07em;max-width:100%}
+@media(max-width:580px){.socio-content{min-height:440px;padding:60px 24px 38px}.socio-content h2{font-size:39px}.socio-content p{font-size:16px}.socio-coming{font-size:11px;padding:13px 15px}}
+
+/* Ajuste solicitado: janela Seja Sócio mais compacta, inclusive no celular. */
+.socio-modal{width:min(90vw,460px);max-height:85vh;border-radius:15px}
+.socio-content{min-height:0;padding:42px 28px 30px}
+.socio-content::before{background-size:65% auto;opacity:.10}
+.socio-content::after{inset:9px}
+.socio-close{top:13px;right:13px;width:32px;height:32px;font-size:22px}
+.socio-kicker{font-size:10px;margin:0 22px 16px;letter-spacing:.13em}
+.socio-content h2{font-size:clamp(27px,5vw,36px);margin:0 0 15px}
+.socio-content p{font-size:14px;line-height:1.5;margin:0 auto 19px}
+.socio-coming{font-size:10px;padding:11px 16px}
+@media(max-width:580px){.socio-modal{width:min(90vw,390px)}.socio-content{min-height:0;padding:42px 22px 25px}.socio-content h2{font-size:29px}.socio-content p{font-size:13px}.socio-coming{font-size:9px;padding:10px 12px}}
 </style>
 </head>
 <body>
@@ -131,9 +156,8 @@
   <div class="socio-content">
     <button type="button" class="socio-close" id="socioFechar" aria-label="Fechar janela">×</button>
     <div class="socio-kicker">COLONIAL ESPORTE CLUBE • DESDE 1955</div>
-    <h2 id="socioTitulo">SEJA SÓCIO DO COLONIAL!</h2>
+    <h2 id="socioTitulo">SEJA SÓCIO<br>DO COLONIAL!</h2>
     <p id="socioDescricao">Faça parte da nossa história! Ajude a fortalecer o esporte, a tradição e os projetos sociais do Colonial Esporte Clube.</p>
-    <span class="socio-coming">INFORMAÇÕES PARA ASSOCIAÇÃO EM BREVE</span>
   </div>
 </dialog>
 <script>
@@ -151,6 +175,12 @@ const socioModal = document.getElementById('socioModal');
 document.getElementById('socioFechar').addEventListener('click', () => socioModal.close());
 socioModal.addEventListener('click', event => { if (event.target === socioModal) socioModal.close(); });
 if (typeof socioModal.showModal === 'function') socioModal.showModal();
+// Reabre o convite ao clicar em Início, sem alterar a navegação existente.
+document.querySelectorAll('#navLinks a[href="#inicio"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof socioModal.showModal === 'function' && !socioModal.open) socioModal.showModal();
+  });
+});
 
 const galeriaDialog = document.getElementById('galeriaFotoAmpliada');
 const galeriaImg = galeriaDialog.querySelector('img');
