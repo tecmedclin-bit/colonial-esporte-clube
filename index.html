@@ -80,27 +80,62 @@
 #fotoAmpliada::backdrop { background: rgba(0,0,0,.86); }
 #fotoAmpliada img { display: block; max-width: 100%; max-height: calc(94vh - 65px); width: auto; height: auto; object-fit: contain; margin: auto; }
 #fecharFoto { position: absolute; right: 8px; top: 6px; color: #fff; background: transparent; border: 0; font-size: 30px; line-height: 1; padding: 3px 9px; cursor: pointer; }
+
+/* Janela de associação: isolada do layout do cabeçalho. */
+.socio-modal{border:0;padding:0;width:min(92vw,560px);max-height:90vh;border-radius:14px;box-shadow:0 24px 85px #0007;overflow:auto;background:#fff;color:#183453}
+.socio-modal::backdrop{background:rgba(2,15,38,.78)}
+.socio-content{padding:34px 32px 38px;text-align:center;border-top:9px solid #063b88}
+.socio-content{position:relative;isolation:isolate;overflow:hidden;background:#fff}
+.socio-content::before{content:"";position:absolute;inset:0;background:url("Bras%C3%A3o%20Colonial%20Esporte%20Clube%20em%20Azul%20e%20Branco.png") center center / 75% auto no-repeat;opacity:.085;z-index:-1;pointer-events:none}
+.socio-content > *{position:relative;z-index:1}
+.socio-close{position:absolute;right:12px;top:12px;background:#edf2f8;border:0;border-radius:50%;height:38px;width:38px;font-size:27px;line-height:1;color:#063b88}
+.socio-kicker{font-size:12px;letter-spacing:.12em;font-weight:800;color:#557392;margin:10px 28px 14px}
+.socio-content h2{font-size:clamp(30px,6vw,44px);line-height:1.07;color:#063b88;margin:0 0 18px}
+.socio-content p{font-size:17px;line-height:1.55;margin:0 auto 22px;max-width:440px}
+.socio-coming{display:block;background:#063b88;color:#fff;font-weight:800;padding:15px 18px;border-radius:5px;letter-spacing:.05em}
+@media(max-width:580px){.socio-content{padding:30px 20px}.socio-content p{font-size:15px}}
+
+/* Galeria da ação social: fotos originais, sem sobreposição de escudos. */
+.gallery-photo{flex:0 0 220px;min-width:220px;border:0;padding:0;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 5px 22px #0a295118;text-align:left;scroll-snap-align:start;color:#082d67;cursor:zoom-in}
+.gallery-photo img{display:block;width:100%;height:320px;object-fit:cover;object-position:center}
+.gallery-photo span{display:block;padding:11px 12px;font-size:13px;font-weight:700}
+.gallery-photo:focus-visible{outline:3px solid #18a5e6;outline-offset:3px}
+#galeriaFotoAmpliada{border:0;padding:48px 12px 14px;background:#08162b;color:#fff;border-radius:10px;max-width:96vw;max-height:95vh;overflow:auto}
+#galeriaFotoAmpliada::backdrop{background:rgba(0,0,0,.88)}
+#galeriaFotoAmpliada img{display:block;max-width:100%;max-height:calc(95vh - 70px);object-fit:contain;margin:auto}
+#fecharGaleriaFoto{position:absolute;right:10px;top:5px;border:0;background:transparent;color:white;font-size:32px;cursor:pointer}
+@media(max-width:580px){.gallery-photo{flex-basis:70%;min-width:70%}.gallery-photo img{height:350px}}
 </style>
 </head>
 <body>
 <div class="top">COLONIAL ESPORTE CLUBE • PAPUCAIA • CACHOEIRAS DE MACACU / RJ</div>
 <header class="header"><nav class="nav"><a class="brand" href="#inicio"> <img class="crest" src="Bras%C3%A3o%20Colonial%20Esporte%20Clube%20em%20Azul%20e%20Branco.png" alt="Escudo do Colonial Esporte Clube" style="width:58px;height:58px;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none;"><strong>COLONIAL<br>ESPORTE CLUBE</strong><small>DESDE 1955</small></a><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">☰ Menu</button><div class="links" id="navLinks"><a href="#inicio">Início</a><a href="#noticias">Notícias</a><a href="#futebol">Futebol</a><a href="#social">Projetos sociais</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></div></nav></header>
 <main><section class="hero" id="inicio"><div class="hero-inner"><span class="eyebrow" id="heroTag">Bem-vindo ao Colonial</span><h1 id="heroTitle">UMA HISTÓRIA DE ESPORTE, UNIÃO E TRADIÇÃO.</h1><p id="heroText">Desde 1955, o Colonial Esporte Clube faz parte da história de Papucaia e de Cachoeiras de Macacu.</p><a class="btn" id="heroLink" href="#noticias">CONHEÇA O CLUBE →</a></div><div class="hero-controls"><button id="prevHero" aria-label="Banner anterior">‹</button><button id="nextHero" aria-label="Próximo banner">›</button></div></section>
-<section id="patrocinadores" style="background:#ffffff; padding:45px 20px; text-align:center; min-height:180px;">
+
+  <section class="container" id="noticias"><div class="section-head"><div><span>Fique por dentro</span><h2>Últimas notícias</h2></div><a href="#galeria">Ver galeria →</a></div><div class="cards"><article class="card"><div class="visual" id="fotoAcaoSocial" role="button" tabindex="0" aria-label="Ampliar foto da ação social" title="Clique para ampliar a foto" style="background-image:url(FOTO%20A%C3%87%C3%83O.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#063b88;cursor:zoom-in;"><b>Social</b></div><div class="card-body"><small>COLONIAL ESPORTE CLUBE</small><h3>Ação social reúne a comunidade no Colonial</h3><p>Saúde, solidariedade e atividades para as famílias em mais uma iniciativa do clube.</p></div></article><article class="card"><div class="visual two"><b>Projetos sociais</b></div><div class="card-body"><small>COMPROMISSO COM A COMUNIDADE</small><h3>Projeto social gratuito atende 300 crianças</h3><p>O Colonial investe em oportunidades e acolhimento para crianças da região.</p></div></article><article class="card"><div class="visual three"><b>Futebol</b></div><div class="card-body"><small>PROJETO EM PLANEJAMENTO</small><h3>Futura escolinha de futebol com Roberto Brum</h3><p>Iniciativa em desenvolvimento para incentivar talentos e a formação esportiva.</p></div></article></div></section>
+<section class="blue-band" id="social"><div class="container"><div class="section-head"><div><span>Muito além do esporte</span><h2>Nosso compromisso social</h2></div></div><div class="highlights"><div class="highlight"><div class="number">300</div><h3>Crianças atendidas</h3><p>O projeto social gratuito do Colonial já atende 300 crianças.</p></div><div class="highlight"><div class="number">1955</div><h3>Uma história de tradição</h3><p>Esporte, encontros e participação na vida da comunidade de Papucaia.</p></div></div></div></section>
+<section class="container" id="futebol"><div class="section-head"><div><span>Esporte e futuro</span><h2>Futebol Colonial</h2></div></div><div class="cards"><article class="card"><div class="visual"><b>Futebol</b></div><div class="card-body"><h3>O futebol faz parte da nossa história</h3><p>Em breve, novidades, fotos, partidas e atividades esportivas.</p></div></article><article class="card"><div class="visual two"><b>Formação</b></div><div class="card-body"><h3>Escolinha de futebol</h3><p>Projeto futuro em parceria com Roberto Brum, ex-jogador profissional e treinador.</p></div></article><article class="card"><div class="visual three"><b>Comunidade</b></div><div class="card-body"><h3>Eventos e encontros</h3><p>Acompanhe a programação esportiva, social e cultural do clube.</p></div></article></div></section>
+<section class="container" id="galeria"><div class="section-head"><div><span>Momentos do clube</span><h2>Galeria de fotos</h2></div></div><div class="gallery-wrap"><div class="gallery" aria-label="Fotos da ação social do Colonial"><button type="button" class="gallery-photo" data-photo="acao_social_01.jpg" aria-label="Ampliar foto: Brincadeiras na ação social"><img src="acao_social_01.jpg" alt="Brincadeiras na ação social no Colonial Esporte Clube" loading="lazy"><span>Brincadeiras na ação social</span></button><button type="button" class="gallery-photo" data-photo="acao_social_02.jpg" aria-label="Ampliar foto: Atendimento à comunidade"><img src="acao_social_02.jpg" alt="Atendimento à comunidade no Colonial Esporte Clube" loading="lazy"><span>Atendimento à comunidade</span></button><button type="button" class="gallery-photo" data-photo="acao_social_03.jpg" aria-label="Ampliar foto: Futebol de sabão"><img src="acao_social_03.jpg" alt="Futebol de sabão no Colonial Esporte Clube" loading="lazy"><span>Futebol de sabão</span></button><button type="button" class="gallery-photo" data-photo="acao_social_04.jpg" aria-label="Ampliar foto: Consulta com cardiologista"><img src="acao_social_04.jpg" alt="Consulta com cardiologista no Colonial Esporte Clube" loading="lazy"><span>Consulta com cardiologista</span></button><button type="button" class="gallery-photo" data-photo="acao_social_05.jpg" aria-label="Ampliar foto: Atendimento de fisioterapia"><img src="acao_social_05.jpg" alt="Atendimento de fisioterapia no Colonial Esporte Clube" loading="lazy"><span>Atendimento de fisioterapia</span></button></div></div></section><section id="patrocinadores" style="background:#ffffff; padding:45px 20px; text-align:center; min-height:180px;">
 <h2 style="color:#063b88; font-size:26px; margin:0 0 30px; text-align:center;">PATROCINADORES</h2>
   <div style="display:flex; justify-content:flex-start; padding-left:30px;">
   <img src="TECMED_Google_Ads_1200x1200.png" alt="TECMED Toxicológico" style="width:180px; max-width:100%; height:auto;">
 </div>
-</section>
-  <section class="container" id="noticias"><div class="section-head"><div><span>Fique por dentro</span><h2>Últimas notícias</h2></div><a href="#galeria">Ver galeria →</a></div><div class="cards"><article class="card"><div class="visual" id="fotoAcaoSocial" role="button" tabindex="0" aria-label="Ampliar foto da ação social" title="Clique para ampliar a foto" style="background-image:url(FOTO%20A%C3%87%C3%83O.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#063b88;cursor:zoom-in;"><b>Social</b></div><div class="card-body"><small>COLONIAL ESPORTE CLUBE</small><h3>Ação social reúne a comunidade no Colonial</h3><p>Saúde, solidariedade e atividades para as famílias em mais uma iniciativa do clube.</p></div></article><article class="card"><div class="visual two"><b>Projetos sociais</b></div><div class="card-body"><small>COMPROMISSO COM A COMUNIDADE</small><h3>Projeto social gratuito atende 300 crianças</h3><p>O Colonial investe em oportunidades e acolhimento para crianças da região.</p></div></article><article class="card"><div class="visual three"><b>Futebol</b></div><div class="card-body"><small>PROJETO EM PLANEJAMENTO</small><h3>Futura escolinha de futebol com Roberto Brum</h3><p>Iniciativa em desenvolvimento para incentivar talentos e a formação esportiva.</p></div></article></div></section>
-<section class="blue-band" id="social"><div class="container"><div class="section-head"><div><span>Muito além do esporte</span><h2>Nosso compromisso social</h2></div></div><div class="highlights"><div class="highlight"><div class="number">300</div><h3>Crianças atendidas</h3><p>O projeto social gratuito do Colonial já atende 300 crianças.</p></div><div class="highlight"><div class="number">1955</div><h3>Uma história de tradição</h3><p>Esporte, encontros e participação na vida da comunidade de Papucaia.</p></div></div></div></section>
-<section class="container" id="futebol"><div class="section-head"><div><span>Esporte e futuro</span><h2>Futebol Colonial</h2></div></div><div class="cards"><article class="card"><div class="visual"><b>Futebol</b></div><div class="card-body"><h3>O futebol faz parte da nossa história</h3><p>Em breve, novidades, fotos, partidas e atividades esportivas.</p></div></article><article class="card"><div class="visual two"><b>Formação</b></div><div class="card-body"><h3>Escolinha de futebol</h3><p>Projeto futuro em parceria com Roberto Brum, ex-jogador profissional e treinador.</p></div></article><article class="card"><div class="visual three"><b>Comunidade</b></div><div class="card-body"><h3>Eventos e encontros</h3><p>Acompanhe a programação esportiva, social e cultural do clube.</p></div></article></div></section>
-<section class="container" id="galeria"><div class="section-head"><div><span>Momentos do clube</span><h2>Galeria de fotos</h2></div></div><div class="gallery-wrap"><div class="gallery" aria-label="Carrossel horizontal de galerias"><div class="gallery-item">AÇÃO SOCIAL<br><small>Fotos em breve</small></div><div class="gallery-item">FUTEBOL<br><small>Fotos em breve</small></div><div class="gallery-item">EVENTOS<br><small>Fotos em breve</small></div><div class="gallery-item">NOSSO CLUBE<br><small>Fotos em breve</small></div></div></div><div class="notice">Esta é a primeira versão do portal. Os espaços visuais são provisórios: vamos inserir o escudo oficial e suas fotografias da ação social e das instalações do clube.</div></section></main>
+</section></main>
 <footer class="footer" id="contato"><div class="footer-inner"><div><h3>COLONIAL ESPORTE CLUBE</h3><p>Desde 1955, tradição, esporte e compromisso com a comunidade.</p><p>Papucaia • Cachoeiras de Macacu • Rio de Janeiro</p></div><div><h3>Navegue</h3><p><a href="#noticias">Notícias</a></p><p><a href="#futebol">Futebol</a></p><p><a href="#social">Projetos sociais</a></p></div><div><h3>Contato</h3><p>Em breve: canais oficiais do clube.</p></div></div><div class="copyright">© <span id="year"></span> Colonial Esporte Clube. Todos os direitos reservados.</div></footer>
 <!-- Configure um número oficial antes de ativar o WhatsApp: https://wa.me/55DDDNUMERO -->
 <a class="floating" id="whatsapp" hidden href="#contato" aria-label="Contato por WhatsApp">☎</a>
 <div class="cookie" id="cookie"><p><strong>Privacidade e cookies.</strong> Este site utiliza apenas armazenamento local para guardar sua escolha sobre este aviso. Não ativamos cookies de publicidade nesta versão.</p><button class="secondary" id="rejectCookies">Entendi</button></div>
 <dialog id="fotoAmpliada" aria-label="Foto ampliada da ação social"><button type="button" id="fecharFoto" aria-label="Fechar foto">×</button><img src="FOTO%20A%C3%87%C3%83O.jpg" alt="Foto da ação social do Colonial Esporte Clube" loading="lazy"></dialog>
+<dialog id="galeriaFotoAmpliada" aria-label="Foto ampliada da galeria"><button type="button" id="fecharGaleriaFoto" aria-label="Fechar foto">×</button><img src="" alt="Fotografia da ação social"></dialog>
+<dialog class="socio-modal" id="socioModal" aria-labelledby="socioTitulo" aria-describedby="socioDescricao">
+  <div class="socio-content">
+    <button type="button" class="socio-close" id="socioFechar" aria-label="Fechar janela">×</button>
+    <div class="socio-kicker">COLONIAL ESPORTE CLUBE • DESDE 1955</div>
+    <h2 id="socioTitulo">SEJA SÓCIO DO COLONIAL!</h2>
+    <p id="socioDescricao">Faça parte da nossa história! Ajude a fortalecer o esporte, a tradição e os projetos sociais do Colonial Esporte Clube.</p>
+    <span class="socio-coming">INFORMAÇÕES PARA ASSOCIAÇÃO EM BREVE</span>
+  </div>
+</dialog>
 <script>
 const slides=[{tag:'Bem-vindo ao Colonial',title:'UMA HISTÓRIA DE ESPORTE, UNIÃO E TRADIÇÃO.',text:'Desde 1955, o Colonial Esporte Clube faz parte da história de Papucaia e de Cachoeiras de Macacu.',label:'CONHEÇA O CLUBE →',href:'#noticias'},{tag:'Projetos sociais',title:'O ESPORTE TRANSFORMA VIDAS.',text:'Um projeto social gratuito que atende 300 crianças e fortalece nossa comunidade.',label:'CONHEÇA O PROJETO →',href:'#social'},{tag:'Futebol e futuro',title:'UM NOVO CAPÍTULO PARA O FUTEBOL.',text:'Conheça os planos para a futura escolinha de futebol com Roberto Brum.',label:'SAIBA MAIS →',href:'#futebol'}];let current=0;function showSlide(i){current=(i+slides.length)%slides.length;let s=slides[current];document.getElementById('heroTag').textContent=s.tag;document.getElementById('heroTitle').textContent=s.title;document.getElementById('heroText').textContent=s.text;let a=document.getElementById('heroLink');a.textContent=s.label;a.href=s.href}document.getElementById('prevHero').onclick=()=>showSlide(current-1);document.getElementById('nextHero').onclick=()=>showSlide(current+1);setInterval(()=>showSlide(current+1),6500);const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.onclick=()=>{let open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open))};navLinks.querySelectorAll('a').forEach(a=>a.onclick=()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')});document.getElementById('year').textContent=new Date().getFullYear();const cookie=document.getElementById('cookie');try{if(!localStorage.getItem('cec-cookie-notice'))cookie.classList.add('show')}catch(e){cookie.classList.add('show')}document.getElementById('rejectCookies').onclick=()=>{try{localStorage.setItem('cec-cookie-notice','acknowledged')}catch(e){}cookie.classList.remove('show')};
 
@@ -110,5 +145,21 @@ fotoAcaoSocial.addEventListener('click', () => fotoAmpliada.showModal());
 fotoAcaoSocial.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fotoAmpliada.showModal(); } });
 document.getElementById('fecharFoto').addEventListener('click', () => fotoAmpliada.close());
 fotoAmpliada.addEventListener('click', e => { if (e.target === fotoAmpliada) fotoAmpliada.close(); });
+
+// Exibe o convite em toda abertura do site, sem guardar preferência.
+const socioModal = document.getElementById('socioModal');
+document.getElementById('socioFechar').addEventListener('click', () => socioModal.close());
+socioModal.addEventListener('click', event => { if (event.target === socioModal) socioModal.close(); });
+if (typeof socioModal.showModal === 'function') socioModal.showModal();
+
+const galeriaDialog = document.getElementById('galeriaFotoAmpliada');
+const galeriaImg = galeriaDialog.querySelector('img');
+document.querySelectorAll('.gallery-photo').forEach(btn => btn.addEventListener('click', () => {
+  galeriaImg.src = btn.dataset.photo;
+  galeriaImg.alt = btn.querySelector('img').alt;
+  galeriaDialog.showModal();
+}));
+document.getElementById('fecharGaleriaFoto').addEventListener('click', () => galeriaDialog.close());
+galeriaDialog.addEventListener('click', e => { if(e.target === galeriaDialog) galeriaDialog.close(); });
 </script>
 </body></html>
