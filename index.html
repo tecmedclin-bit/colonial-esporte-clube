@@ -165,6 +165,27 @@
 .hero.hero-roberto { background:#07132f !important; }
 .hero.hero-roberto::before { content:none !important; display:none !important; }
 .hero.hero-roberto .roberto-banner-img { display:block !important; width:100% !important; height:100% !important; object-fit:contain !important; object-position:center center !important; background:#07132f !important; filter:none !important; transform:none !important; }
+
+/* CORRECAO MOBILE: altura proporcional a arte original (1414 x 761).
+   Mantem desktop, rosto, texto e demais secoes inalterados. */
+@media (max-width: 650px) {
+  .hero.hero-roberto {
+    height: calc(100vw * 761 / 1414) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .hero.hero-roberto .roberto-banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+  }
+  .hero.hero-roberto .hero-controls {
+    bottom: 6px !important;
+    left: 10px !important;
+    z-index: 5 !important;
+  }
+}
 </style>
 </head>
 <body>
