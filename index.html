@@ -245,6 +245,16 @@
     height: 30px;
   }
 }
+
+/* WhatsApp: pulso discreto para chamar atenção sem esconder o ícone. */
+#whatsapp:not([hidden]) { animation: cec-whatsapp-pulse 2.8s ease-in-out infinite; transform-origin:center; }
+@keyframes cec-whatsapp-pulse {
+  0%, 68%, 100% { transform:scale(1); box-shadow:0 5px 20px #0003, 0 0 0 0 rgba(25,185,103,.35); }
+  78% { transform:scale(1.08); box-shadow:0 5px 20px #0003, 0 0 0 8px rgba(25,185,103,.12); }
+  90% { transform:scale(1); box-shadow:0 5px 20px #0003, 0 0 0 14px rgba(25,185,103,0); }
+}
+#whatsapp:hover, #whatsapp:focus-visible { animation-play-state:paused; }
+@media (prefers-reduced-motion: reduce) { #whatsapp:not([hidden]) { animation:none; } }
 </style>
 </head>
 <body>
@@ -262,8 +272,8 @@
 </div>
 </section></main>
 <footer class="footer" id="contato"><div class="footer-inner"><div><h3>COLONIAL ESPORTE CLUBE</h3><p>Desde 1955, tradição, esporte e compromisso com a comunidade.</p><p><strong>Endereço:</strong> Av. Senador Doutel de Andrade, sn – Centro (Papucaia), Cachoeiras de Macacu – RJ, CEP 28691-298</p></div><div><h3>Navegue</h3><p><a href="#noticias">Notícias</a></p><p><a href="#futebol">Futebol</a></p><p><a href="#social">Projetos sociais</a></p></div><div><h3>Contato</h3><p>Acompanhe nossas redes sociais nos canais oficiais no topo do site.</p></div></div><div class="copyright">© <span id="year"></span> Colonial Esporte Clube. Todos os direitos reservados.</div></footer>
-<!-- Configure um número oficial antes de ativar o WhatsApp: https://wa.me/55DDDNUMERO -->
-<a class="floating" id="whatsapp" hidden href="#contato" aria-label="Contato por WhatsApp">☎</a>
+<!-- WhatsApp oficial do Colonial Esporte Clube -->
+<a class="floating" id="whatsapp" href="https://wa.me/5521986361883?text=Ol%C3%A1%21%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20o%20Colonial%20Esporte%20Clube." target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Colonial Esporte Clube pelo WhatsApp" title="Fale conosco pelo WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false" style="display:block;fill:#fff;flex-shrink:0"><path d="M16.003 2.667C8.64 2.667 2.667 8.637 2.664 16a13.25 13.25 0 0 0 1.78 6.65L2.667 29.333l6.852-1.797a13.3 13.3 0 0 0 6.477 1.65h.007c7.36 0 13.33-5.97 13.333-13.333a13.24 13.24 0 0 0-3.9-9.43 13.24 13.24 0 0 0-9.433-3.756Zm0 24.267a11.07 11.07 0 0 1-5.64-1.546l-.404-.24-4.184 1.096 1.117-4.08-.263-.42a11.04 11.04 0 0 1-1.693-5.744c.002-6.11 4.963-11.08 11.073-11.08a11.01 11.01 0 0 1 7.836 3.246 11.01 11.01 0 0 1 3.241 7.84c-.003 6.112-4.968 11.08-11.083 11.08Zm6.077-8.3c-.333-.167-1.967-.97-2.272-1.082-.305-.111-.527-.167-.75.167-.222.333-.86 1.082-1.054 1.305-.194.222-.388.25-.722.083-.333-.167-1.407-.518-2.68-1.65-.99-.883-1.658-1.973-1.852-2.307-.194-.333-.02-.513.146-.68.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.416-.028-.583-.083-.167-.75-1.806-1.027-2.472-.27-.648-.544-.56-.75-.57l-.638-.01c-.222 0-.583.083-.888.416-.305.334-1.166 1.139-1.166 2.778s1.194 3.222 1.36 3.445c.167.222 2.35 3.59 5.694 5.034.795.343 1.416.548 1.9.701.798.254 1.525.218 2.1.132.64-.096 1.967-.805 2.244-1.583.277-.778.277-1.445.194-1.584-.083-.139-.305-.222-.638-.389Z"/></svg></a>
 <div class="cookie" id="cookie"><p><strong>Privacidade e cookies.</strong> Este site utiliza apenas armazenamento local para guardar sua escolha sobre este aviso. Não ativamos cookies de publicidade nesta versão.</p><button class="secondary" id="rejectCookies">Entendi</button></div>
 <dialog id="fotoAmpliada" aria-label="Foto ampliada da ação social"><button type="button" id="fecharFoto" aria-label="Fechar foto">×</button><img src="FOTO%20A%C3%87%C3%83O.jpg" alt="Foto da ação social do Colonial Esporte Clube" loading="lazy"></dialog>
 <dialog id="galeriaFotoAmpliada" aria-label="Foto ampliada da galeria"><button type="button" id="fecharGaleriaFoto" aria-label="Fechar foto">×</button><img src="" alt="Fotografia da ação social"></dialog>
