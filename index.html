@@ -255,6 +255,12 @@
 }
 #whatsapp:hover, #whatsapp:focus-visible { animation-play-state:paused; }
 @media (prefers-reduced-motion: reduce) { #whatsapp:not([hidden]) { animation:none; } }
+
+/* Botão de associação na janela Seja Sócio */
+.socio-content .socio-instrucao{font-size:13px;line-height:1.45;margin:-5px auto 15px;max-width:340px;color:#e2efff}
+.socio-whatsapp-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#25d366;color:#08371f!important;border-radius:30px;padding:13px 23px;font-size:13px;font-weight:900;letter-spacing:.03em;box-shadow:0 5px 18px #0003;transition:background .2s,transform .2s}
+.socio-whatsapp-btn:hover,.socio-whatsapp-btn:focus-visible{background:#3bea7a;transform:translateY(-2px)}
+@media(max-width:580px){.socio-content .socio-instrucao{font-size:12px;margin:-3px auto 12px}.socio-whatsapp-btn{font-size:12px;padding:12px 19px}}
 </style>
 </head>
 <body>
@@ -283,6 +289,8 @@
     <div class="socio-kicker">COLONIAL ESPORTE CLUBE • DESDE 1955</div>
     <h2 id="socioTitulo">SEJA SÓCIO<br>DO COLONIAL!</h2>
     <p id="socioDescricao">Faça parte da nossa história! Ajude a fortalecer o esporte, a tradição e os projetos sociais do Colonial Esporte Clube.</p>
+    <p class="socio-instrucao">Quer se tornar sócio? Fale diretamente com a administração do clube pelo WhatsApp.</p>
+    <a class="socio-whatsapp-btn" href="https://wa.me/5521986361883?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20como%20me%20tornar%20s%C3%B3cio%20do%20Colonial%20Esporte%20Clube." target="_blank" rel="noopener noreferrer" aria-label="Quero ser sócio: falar com a administração pelo WhatsApp">QUERO SER SÓCIO <span aria-hidden="true">↗</span></a>
   </div>
 </dialog>
 <script>
