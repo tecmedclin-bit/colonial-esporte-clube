@@ -194,9 +194,55 @@
 .gallery-arrow.prev{left:0}.gallery-arrow.next{right:0}
 .gallery-arrow:hover{background:#0b67b8}.gallery-arrow:disabled{opacity:.35;cursor:default}
 @media(max-width:580px){.gallery-wrap{padding:0 33px}.gallery-arrow{width:29px;height:43px;font-size:26px}}
-@media (max-width: 600px) {
-  .hero {
-    min-height: 300px;
+/* MOBILE: todos os slides com a mesma altura proporcional da arte Roberto Brum.
+   Tipografia e espacos compactos nos slides com texto; desktop inalterado. */
+@media (max-width: 650px) {
+  .hero, .hero.hero-roberto {
+    height: calc(100vw * 761 / 1414) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+  .hero:not(.hero-roberto) .hero-inner {
+    height: 100%;
+    max-width: 100%;
+    padding: 10px 14px 28px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .hero:not(.hero-roberto) .eyebrow {
+    font-size: 8px;
+    letter-spacing: .08em;
+    padding: 3px 7px;
+    line-height: 1.2;
+  }
+  .hero:not(.hero-roberto) h1 {
+    font-size: clamp(16px, 4.5vw, 23px) !important;
+    line-height: 1.03;
+    margin: 5px 0 !important;
+    max-width: 100%;
+  }
+  .hero:not(.hero-roberto) p {
+    font-size: clamp(10px, 2.65vw, 12px) !important;
+    line-height: 1.2;
+    margin: 2px 0 !important;
+    max-width: 100%;
+  }
+  .hero:not(.hero-roberto) .btn {
+    font-size: 10px;
+    line-height: 1.2;
+    padding: 6px 9px;
+    margin-top: 5px;
+  }
+  .hero:not(.hero-roberto) .hero-controls {
+    left: auto !important;
+    right: 10px !important;
+    bottom: 6px !important;
+  }
+  .hero .hero-controls button {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>
