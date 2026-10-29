@@ -166,11 +166,11 @@
 .hero.hero-roberto::before { content:none !important; display:none !important; }
 .hero.hero-roberto .roberto-banner-img { display:block !important; width:100% !important; height:100% !important; object-fit:contain !important; object-position:center center !important; background:#07132f !important; filter:none !important; transform:none !important; }
 
-/* CORRECAO MOBILE: altura proporcional a arte original (1414 x 761).
+/* CORRECAO MOBILE: altura proporcional a nova arte (16:9).
    Mantem desktop, rosto, texto e demais secoes inalterados. */
 @media (max-width: 650px) {
   .hero.hero-roberto {
-    height: calc(100vw * 761 / 1414) !important;
+    height: calc(100vw * 9 / 16) !important;
     min-height: 0 !important;
     max-height: none !important;
   }
@@ -198,7 +198,7 @@
    Tipografia e espacos compactos nos slides com texto; desktop inalterado. */
 @media (max-width: 650px) {
   .hero, .hero.hero-roberto {
-    height: calc(100vw * 761 / 1414) !important;
+    height: calc(100vw * 9 / 16) !important;
     min-height: 0 !important;
     max-height: none !important;
   }
@@ -266,7 +266,7 @@
 <body>
 <div class="top"><span class="top-local">COLONIAL ESPORTE CLUBE • PAPUCAIA • CACHOEIRAS DE MACACU / RJ</span><div class="top-sociais"><span>CANAIS OFICIAIS</span><div class="cec-redes" aria-label="Redes sociais do Colonial Esporte Clube"><a href="https://www.facebook.com/share/1AR73nCAP7/" target="_blank" rel="noopener noreferrer" aria-label="Facebook do Colonial Esporte Clube" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a><a href="https://www.instagram.com/colonialesporteclube/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Colonial Esporte Clube" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.7" cy="6.5" r="1.3" fill="currentColor"/></svg></a></div></div></div>
 <header class="header"><nav class="nav"><a class="brand" href="#inicio"> <img class="crest" src="Bras%C3%A3o%20Colonial%20Esporte%20Clube%20em%20Azul%20e%20Branco.png" alt="Escudo do Colonial Esporte Clube" style="width:58px;height:58px;object-fit:contain;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none;"><strong>COLONIAL<br>ESPORTE CLUBE</strong><small>DESDE 1955</small></a><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">☰ Menu</button><div class="links" id="navLinks"><a href="#inicio">Início</a><a href="#noticias">Notícias</a><a href="#futebol">Futebol</a><a href="#social">Projetos sociais</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a></div></nav></header>
-<main><section class="hero" id="inicio"><img class="roberto-banner-img" src="roberto_brum_capa_nova.png" alt="Roberto Brum — Colonial Esporte Clube"><div class="hero-inner"><span class="eyebrow" id="heroTag">Bem-vindo ao Colonial</span><h1 id="heroTitle">UMA HISTÓRIA DE ESPORTE, UNIÃO E TRADIÇÃO.</h1><p id="heroText">Desde 1955, o Colonial Esporte Clube faz parte da história de Papucaia e de Cachoeiras de Macacu.</p><a class="btn" id="heroLink" href="#noticias">CONHEÇA O CLUBE →</a></div><div class="hero-controls"><button id="prevHero" aria-label="Banner anterior">‹</button><button id="nextHero" aria-label="Próximo banner">›</button></div></section>
+<main><section class="hero" id="inicio"><img class="roberto-banner-img" src="roberto-brum-capa.jpg" alt="Roberto Brum — Colonial Esporte Clube"><div class="hero-inner"><span class="eyebrow" id="heroTag">Bem-vindo ao Colonial</span><h1 id="heroTitle">UMA HISTÓRIA DE ESPORTE, UNIÃO E TRADIÇÃO.</h1><p id="heroText">Desde 1955, o Colonial Esporte Clube faz parte da história de Papucaia e de Cachoeiras de Macacu.</p><a class="btn" id="heroLink" href="#noticias">CONHEÇA O CLUBE →</a></div><div class="hero-controls"><button id="prevHero" aria-label="Banner anterior">‹</button><button id="nextHero" aria-label="Próximo banner">›</button></div></section>
 
   <section class="container" id="noticias"><div class="section-head"><div><span>Fique por dentro</span><h2>Últimas notícias</h2></div><a href="#galeria">Ver galeria →</a></div><div class="cards"><article class="card"><div class="visual" id="fotoAcaoSocial" role="button" tabindex="0" aria-label="Ampliar foto da ação social" title="Clique para ampliar a foto" style="background-image:url(FOTO%20A%C3%87%C3%83O.jpg);background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#063b88;cursor:zoom-in;"><b>Social</b></div><div class="card-body"><small>COLONIAL ESPORTE CLUBE</small><h3>Ação social reúne a comunidade no Colonial</h3><p>Saúde, solidariedade e atividades para as famílias em mais uma iniciativa do clube.</p></div></article><article class="card"><div class="visual two"><b>Projetos sociais</b></div><div class="card-body"><small>COMPROMISSO COM A COMUNIDADE</small><h3>Projeto social gratuito atende 300 crianças</h3><p>O Colonial investe em oportunidades e acolhimento para crianças da região.</p></div></article><article class="card"><div class="visual three"><b>Futebol</b></div><div class="card-body"><small>PROJETO EM PLANEJAMENTO</small><h3>Futura escolinha de futebol com Roberto Brum</h3><p>Iniciativa em desenvolvimento para incentivar talentos e a formação esportiva.</p></div></article></div></section>
 <section class="blue-band" id="social"><div class="container"><div class="section-head"><div><span>Muito além do esporte</span><h2>Nosso compromisso social</h2></div></div><div class="highlights"><div class="highlight"><div class="number">300</div><h3>Crianças atendidas</h3><p>O projeto social gratuito do Colonial já atende 300 crianças.</p></div><div class="highlight"><div class="number">1955</div><h3>Uma história de tradição</h3><p>Esporte, encontros e participação na vida da comunidade de Papucaia.</p></div></div></section>
