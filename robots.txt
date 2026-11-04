@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://colonialesporteclube.com.br/sitemap.xml
