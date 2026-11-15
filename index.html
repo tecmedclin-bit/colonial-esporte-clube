@@ -647,6 +647,59 @@ body:has(#futebolModal[open]) { overflow: hidden !important; }
   z-index: 10 !important;
 }
 </style>
+<style id="cec-cookie-modern-design">
+#cookie.cec-consent-open {
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto auto !important;
+  align-items:center !important;
+  gap:14px !important;
+  left:20px !important;right:20px !important;bottom:22px !important;
+  max-width:980px !important;
+  width:calc(100% - 40px) !important;
+  margin:0 auto !important;
+  padding:22px 24px !important;
+  background:#ffffff !important;
+  border:1px solid rgba(20,55,100,.12) !important;
+  border-radius:18px !important;
+  box-shadow:0 18px 55px rgba(4,23,55,.26) !important;
+  color:#18283e !important;
+  font-family:inherit !important;
+  line-height:1.5 !important;
+  transform:none !important;
+}
+#cookie.cec-consent-open p {
+  margin:0 !important;min-width:0 !important;max-width:none !important;
+  font-size:14px !important;line-height:1.6 !important;color:#435168 !important;
+}
+#cookie.cec-consent-open p strong {
+  display:block !important;font-size:16px !important;line-height:1.35 !important;
+  margin-bottom:5px !important;color:#102a52 !important;
+}
+#cookie.cec-consent-open button {
+  position:static !important;min-height:44px !important;
+  padding:11px 18px !important;border-radius:10px !important;
+  font-size:14px !important;font-weight:700 !important;
+  white-space:nowrap !important;cursor:pointer !important;
+  box-shadow:none !important;transform:none !important;
+}
+#cookie.cec-consent-open #rejectCookies {
+  background:#f0f4f9 !important;color:#17385e !important;
+  border:1px solid #d8e1ec !important;
+}
+#cookie.cec-consent-open #acceptCookies {
+  background:#0864c9 !important;color:white !important;border:1px solid #0864c9 !important;
+}
+#cookie.cec-consent-open #acceptCookies:hover {background:#064f9f !important;}
+@media(max-width:780px){
+ #cookie.cec-consent-open {grid-template-columns:1fr 1fr !important;gap:12px !important;padding:20px !important;}
+ #cookie.cec-consent-open p {grid-column:1/-1 !important;}
+ #cookie.cec-consent-open button {width:100% !important;white-space:normal !important;}
+}
+@media(max-width:430px){
+ #cookie.cec-consent-open {left:12px !important;right:12px !important;bottom:12px !important;width:calc(100% - 24px) !important;padding:16px !important;}
+ #cookie.cec-consent-open button {font-size:12px !important;padding:10px 7px !important;}
+}
+</style>
 </head>
 <body>
 <div class="top"><span class="top-local">COLONIAL ESPORTE CLUBE • PAPUCAIA • CACHOEIRAS DE MACACU / RJ</span><div class="top-sociais"><span>CANAIS OFICIAIS</span><div aria-label="Redes sociais do Colonial Esporte Clube" class="cec-redes"><a aria-label="Facebook do Colonial Esporte Clube" href="https://www.facebook.com/share/1ChxWRWNmA/" rel="noopener noreferrer" target="_blank" title="Facebook"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.62.77-1.62 1.56V12h2.77l-.44 2.88h-2.33v6.99A10 10 0 0 0 22 12Z" fill="currentColor"></path></svg></a><a aria-label="Instagram do Colonial Esporte Clube" href="https://www.instagram.com/colonialesporteclube/" rel="noopener noreferrer" target="_blank" title="Instagram"><svg aria-hidden="true" viewbox="0 0 24 24"><rect fill="none" height="19" rx="5.5" stroke="currentColor" stroke-width="2" width="19" x="2.5" y="2.5"></rect><circle cx="12" cy="12" fill="none" r="4.2" stroke="currentColor" stroke-width="2"></circle><circle cx="17.7" cy="6.5" fill="currentColor" r="1.3"></circle></svg></a></div></div></div>
@@ -702,7 +755,7 @@ body:has(#futebolModal[open]) { overflow: hidden !important; }
 <footer class="footer" id="contato"><div class="footer-inner"><div><h3>COLONIAL ESPORTE CLUBE</h3><p>Desde 1955, tradição, esporte e compromisso com a comunidade.</p><p><strong>Endereço:</strong> Av. Senador Doutel de Andrade, sn – Centro (Papucaia), Cachoeiras de Macacu – RJ, CEP 28691-298</p></div><div><h3>Navegue</h3><p><a href="#noticias">Notícias</a></p><p><a href="#futebol">Futebol</a></p><p><a href="#social">Projetos sociais</a></p></div><div><h3>Contato</h3><p>Acompanhe nossas redes sociais nos canais oficiais no topo do site.</p></div></div><div class="copyright">© <span id="year"></span> Colonial Esporte Clube. Todos os direitos reservados.<div style="margin-top:8px;font-size:11px;color:#91a8c7">Desenvolvido por Everton Santos</div></div></footer>
 <!-- WhatsApp oficial do Colonial Esporte Clube -->
 <a aria-label="Conversar com o Colonial Esporte Clube pelo WhatsApp" class="floating" href="https://wa.me/5521986361883?text=Ol%C3%A1%21%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20o%20Colonial%20Esporte%20Clube." id="whatsapp" rel="noopener noreferrer" target="_blank" title="Fale conosco pelo WhatsApp"><svg aria-hidden="true" focusable="false" height="34" style="display:block;fill:#fff;flex-shrink:0" viewbox="0 0 32 32" width="34" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 2.667C8.64 2.667 2.667 8.637 2.664 16a13.25 13.25 0 0 0 1.78 6.65L2.667 29.333l6.852-1.797a13.3 13.3 0 0 0 6.477 1.65h.007c7.36 0 13.33-5.97 13.333-13.333a13.24 13.24 0 0 0-3.9-9.43 13.24 13.24 0 0 0-9.433-3.756Zm0 24.267a11.07 11.07 0 0 1-5.64-1.546l-.404-.24-4.184 1.096 1.117-4.08-.263-.42a11.04 11.04 0 0 1-1.693-5.744c.002-6.11 4.963-11.08 11.073-11.08a11.01 11.01 0 0 1 7.836 3.246 11.01 11.01 0 0 1 3.241 7.84c-.003 6.112-4.968 11.08-11.083 11.08Zm6.077-8.3c-.333-.167-1.967-.97-2.272-1.082-.305-.111-.527-.167-.75.167-.222.333-.86 1.082-1.054 1.305-.194.222-.388.25-.722.083-.333-.167-1.407-.518-2.68-1.65-.99-.883-1.658-1.973-1.852-2.307-.194-.333-.02-.513.146-.68.15-.15.333-.389.5-.583.167-.194.222-.333.333-.556.111-.222.056-.416-.028-.583-.083-.167-.75-1.806-1.027-2.472-.27-.648-.544-.56-.75-.57l-.638-.01c-.222 0-.583.083-.888.416-.305.334-1.166 1.139-1.166 2.778s1.194 3.222 1.36 3.445c.167.222 2.35 3.59 5.694 5.034.795.343 1.416.548 1.9.701.798.254 1.525.218 2.1.132.64-.096 1.967-.805 2.244-1.583.277-.778.277-1.445.194-1.584-.083-.139-.305-.222-.638-.389Z"></path></svg></a>
-<div class="cookie" id="cookie"><p><strong>Privacidade e cookies.</strong> Este site utiliza apenas armazenamento local para guardar sua escolha sobre este aviso. Não ativamos cookies de publicidade nesta versão.</p><button class="secondary" id="rejectCookies">Entendi</button></div>
+<div class="cookie" id="cookie"><p><strong>Privacidade e cookies.</strong> Usamos armazenamento local para lembrar sua escolha. Você pode aceitar ou recusar cookies opcionais. Nesta versão, não ativamos cookies de publicidade.</p><button class="secondary" id="rejectCookies" type="button">Recusar opcionais</button><button id="acceptCookies" type="button">Aceitar cookies</button></div>
 <dialog aria-label="Foto ampliada da ação social" id="fotoAmpliada"><button aria-label="Fechar foto" id="fecharFoto" type="button">×</button><img alt="Foto da ação social do Colonial Esporte Clube" loading="lazy" src="FOTO%20A%C3%87%C3%83O.jpg"/></dialog>
 <dialog aria-label="Foto ampliada da galeria" id="galeriaFotoAmpliada"><button aria-label="Fechar foto" id="fecharGaleriaFoto" type="button">×</button><img alt="Fotografia da ação social" src=""/></dialog>
 <dialog aria-describedby="socioDescricao" aria-labelledby="socioTitulo" class="socio-modal" id="socioModal">
@@ -764,7 +817,8 @@ document.getElementById('prevHero').onclick=()=>cecTransitionSlide(current-1);
 document.getElementById('nextHero').onclick=()=>cecTransitionSlide(current+1);
 const pauseHero=document.getElementById('pauseHero');pauseHero.onclick=()=>{cecPaused=!cecPaused;pauseHero.textContent=cecPaused?'▶':'Ⅱ';pauseHero.setAttribute('aria-label',cecPaused?'Retomar carrossel':'Pausar carrossel')};
 setInterval(()=>{if(!cecPaused&&!cecChanging)cecTransitionSlide(current+1)},6500);
-const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.onclick=()=>{let open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open))};navLinks.querySelectorAll('a').forEach(a=>a.onclick=()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')});document.getElementById('year').textContent=new Date().getFullYear();const cookie=document.getElementById('cookie');try{if(!localStorage.getItem('cec-cookie-notice'))cookie.classList.add('show')}catch(e){cookie.classList.add('show')}document.getElementById('rejectCookies').onclick=()=>{try{localStorage.setItem('cec-cookie-notice','acknowledged')}catch(e){}cookie.classList.remove('show')};
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.onclick=()=>{let open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open))};navLinks.querySelectorAll('a').forEach(a=>a.onclick=()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')});document.getElementById('year').textContent=new Date().getFullYear();const cookie=document.getElementById('cookie');try{if(!localStorage.getItem('cec-cookie-consent-v2'))cookie.dataset.pending='true'}catch(e){cookie.dataset.pending='true'}document.getElementById('rejectCookies').onclick=()=>{try{localStorage.setItem('cec-cookie-consent-v2','rejected')}catch(e){}cookie.classList.remove('show')};
+document.getElementById('acceptCookies').onclick=()=>{try{localStorage.setItem('cec-cookie-consent-v2','accepted')}catch(e){}cookie.classList.remove('show')};
 
 const fotoAcaoSocial = document.getElementById('fotoAcaoSocial');
 const fotoAmpliada = document.getElementById('fotoAmpliada');
@@ -847,4 +901,49 @@ biribaModal.addEventListener('click',e=>{if(e.target===biribaModal)biribaModal.c
 </script>
 
 
+
+
+
+<style id="cec-cookie-consent-v4-style">
+#cookie.cec-consent-open {
+ display:flex !important; visibility:visible !important; opacity:1 !important;
+ position:fixed !important; z-index:2147483647 !important;
+ left:16px !important; right:16px !important; bottom:16px !important;
+ max-width:740px !important; margin:0 auto !important;
+ box-sizing:border-box !important; flex-wrap:wrap !important;
+}
+@media(max-width:650px){
+ #cookie.cec-consent-open{flex-direction:column !important;align-items:stretch !important}
+ #cookie.cec-consent-open button{white-space:normal !important}
+}
+</style>
+<script id="cec-cookie-consent-v4-script">
+(function(){
+ 'use strict';
+ const banner=document.getElementById('cookie');
+ const modal=document.getElementById('socioModal');
+ const aceitar=document.getElementById('acceptCookies');
+ const recusar=document.getElementById('rejectCookies');
+ if(!banner||!aceitar||!recusar)return;
+ const chave='cec-cookie-consent-v4';
+ const temEscolha=()=>{try{return localStorage.getItem(chave)!==null}catch(e){return false}};
+ const ocultar=()=>{banner.classList.remove('show','cec-cookie-visible','cec-consent-open');banner.style.display='none'};
+ const exibir=()=>{
+   if(temEscolha())return ocultar();
+   if(modal && modal.open)return;
+   banner.classList.add('show','cec-consent-open');
+   banner.style.display='flex';
+ };
+ function salvar(valor){try{localStorage.setItem(chave,valor)}catch(e){} ocultar()}
+ aceitar.onclick=()=>salvar('accepted');
+ recusar.onclick=()=>salvar('rejected');
+ if(modal){
+   modal.addEventListener('close',()=>setTimeout(exibir,100));
+   new MutationObserver(()=>{if(!modal.open)setTimeout(exibir,100)}).observe(modal,{attributes:true,attributeFilter:['open']});
+ }
+ // Verifica também o fechamento feito por scripts próprios do site.
+ window.addEventListener('load',()=>setTimeout(exibir,1200),{once:true});
+ setTimeout(exibir,2200);
+})();
+</script>
 </body></html>
