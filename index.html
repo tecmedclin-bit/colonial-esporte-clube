@@ -345,6 +345,10 @@
   transform: scale(1.09) !important;
 }
 
+
+/* Botão de fechar sempre na faixa branca acima da imagem, inclusive crianças. */
+#futebolModal.futebol-modal { position: relative; padding-top: 60px !important; }
+#futebolModal .fechar-futebol { position: absolute !important; top: 12px !important; right: 16px !important; z-index: 5 !important; }
 </style>
 <style>
 /* Capa Biriba: layout 16:9 sem sobrepor o brasão superior esquerdo */
@@ -599,6 +603,49 @@
 .cec-basquete p{font-size:16px;line-height:1.65;color:#e5e6f5;margin:0 0 22px}
 .cec-basquete-status{display:inline-block;background:#fff;color:#18104b;border-radius:6px;padding:12px 19px;font-weight:900;letter-spacing:.08em;font-size:12px}
 @media(max-width:780px){.cec-basquete{padding:42px 18px}.cec-basquete-wrap{grid-template-columns:1fr;gap:22px}.cec-basquete p{font-size:15px}}
+</style>
+
+<style id="futebol-modal-fixo-definitivo">
+/* A janela é fixa, sem barra de rolagem, mantendo a foto tão grande quanto o espaço permitir. */
+html:has(#futebolModal[open]),
+body:has(#futebolModal[open]) { overflow: hidden !important; }
+#futebolModal.futebol-modal {
+  position: fixed !important;
+  box-sizing: border-box !important;
+  width: min(96vw, 1100px) !important;
+  height: min(94dvh, 900px) !important;
+  max-height: 94dvh !important;
+  padding: 54px 16px 14px !important;
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  grid-template-rows: minmax(0, 1fr) auto auto !important;
+  gap: 6px !important;
+  align-content: stretch !important;
+}
+#futebolModal.futebol-modal[open] { display: grid !important; }
+#futebolModal #futebolModalImagem {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+#futebolModal #futebolModalImagem[hidden] { display: none !important; }
+#futebolModal #futebolModalTitulo,
+#futebolModal #futebolModalTexto {
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+#futebolModal .fechar-futebol {
+  position: absolute !important;
+  top: 10px !important;
+  right: 14px !important;
+  z-index: 10 !important;
+}
 </style>
 </head>
 <body>
