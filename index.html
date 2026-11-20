@@ -791,7 +791,9 @@ body:has(#futebolModal[open]) { overflow: hidden !important; }
   }
   @media(max-width:650px) {
     #cec-transicao-cobertura {--cec-foto-h:calc(100vw * 9 / 16);--cec-topo:76px;}
-    #cec-intervalo-foto {height:calc(100svh - var(--cec-topo) + 12px);min-height:0;}
+    /* No celular o espaço acompanha a altura real da foto: a parte branca inferior
+       começa a cobri-la logo após a revelação, sem deixar um vazio de quase 1 tela. */
+    #cec-intervalo-foto {height:calc(var(--cec-foto-h) + 24px);min-height:0;}
     #cec-transicao-cobertura #beneficios-associados {min-height:65svh;}
   }
 </style>
