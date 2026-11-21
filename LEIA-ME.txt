@@ -1,23 +1,16 @@
-COLONIAL ESPORTE CLUBE - AJUSTE PARA PESQUISA GOOGLE (04/11/2026)
+COLONIAL ESPORTE CLUBE — LIVRO MÃES E PAIS ATÍPICOS
 
-Esta versão mantém a página de "Em breve" e o brasão originais.
-Não transfere o site de desenvolvimento para a produção.
+Arquivos prontos para publicar no mesmo nível (raiz) do repositório do site:
+  index.html
+  autismo.html
+  capa-maes-pais-atipicos.jpg
+  livro-maes-e-pais-atipicos.pdf
 
-1. No repositório GitHub tecmedclin-bit/colonial-esporte-clube, selecione a branch MAIN.
-2. Em Add file > Upload files, envie os CINCO arquivos a seguir:
-   index.html (substitui o index.html atual), favicon.png, favicon.ico, robots.txt, sitemap.xml.
-   NÃO envie LEIA-ME.txt nem o arquivo ZIP. NÃO apague o CNAME.
-3. Confirme a alteração em Commit changes e confira o domínio oficial.
-4. Abra https://search.google.com/search-console e adicione a propriedade de domínio
-   colonialesporteclube.com.br. Conclua a verificação por DNS TXT no Registro.br.
-5. Em Inspeção de URL, analise https://colonialesporteclube.com.br/,
-   teste a URL publicada e clique em Solicitar indexação.
-6. Em Sitemaps, envie https://colonialesporteclube.com.br/sitemap.xml
-7. Aguarde o Google rastrear. Indexação, nome e favicon são automáticos e não garantidos.
+1. No GitHub do site, envie/substitua index.html e autismo.html.
+2. Envie também a capa JPG e o PDF com os nomes exatos acima.
+3. Publique todos na mesma pasta (raiz do repositório), no branch publicado pelo GitHub Pages.
+4. O carrossel de causa autista no index continua abrindo autismo.html.
+5. Na página autismo.html há o botão "Livro gratuito" e uma seção com a capa, os botões "Baixar gratuitamente" e "Ler o livro on-line".
+6. O arquivo PDF é o original, sem alterações.
 
-Se a página não abrir, verifique primeiro o domínio (DNS do Registro.br)
-e o Custom domain/Enforce HTTPS em Settings > Pages no GitHub.
-
-ATENÇÃO: a branch desenvolvimento ainda é separada. Quando lançar o site completo
-na MAIN, será preciso aplicar nele também o bloco de metadados e referências
-para o favicon, para não voltar a perder a configuração.
+ATENÇÃO: a mudança só aparecerá no domínio oficial após publicar os quatro arquivos no repositório correto.
